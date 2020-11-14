@@ -26,9 +26,9 @@ class User:
       
         User.user_list.remove(self)
 
-    # @classmethod
-    # def display_user(cls):
-    #     """
-    #     display user method to display list of user
-    #     """
-    #     return cls.user_list
+    @classmethod
+    def display_user(cls):
+        """
+        display user method to display list of user
+        """
+        return cls.user_list
