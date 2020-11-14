@@ -40,6 +40,11 @@ class Credential:
             if name.username == username:
                 return name
 
+    @classmethod
+    def copy_password(cls,username):
+        found_credential = Credential.find_by_username(usrname)
+        pyperclip.copy(found_credential.password)
+
     @classmethod 
     def credential_exist(cls,username):
         """
