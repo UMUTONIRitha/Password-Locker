@@ -13,9 +13,9 @@ class Credential:
         self.username = username
         self.password = password
 
-    # def save_credential(self):
+    def save_credential(self):
 
-    #     """
-    #     save_cridential method to saves users object into user list
-    #     """
-    #     Cridential.cridential_list.append(self)
+        """
+        save_cridential method to saves users object into user list
+        """
+        Credential.credential_list.append(self)
