@@ -64,7 +64,7 @@ class Credential:
     @classmethod 
     def credential_exist(cls,username):
         """
-        Method that checks if a credential exists from the credential list.
+        Method that checks if a credential exists from the credential list and return true or false.
         """
 
 
