@@ -71,6 +71,15 @@ class TestCredential(unittest.TestCase):
 
         self.assertEqual(found_credential.accountName,test_credential.accountName)
 
+    def test_copy_password(self):
+        """
+        Test to confirm that we are copying the password from a found credential
+        """
+        self.new_credential.save_credential()
+        Credential.copy_password("UmutoniRita")
+
+        self.assertEqual(self.new_credential.password,pyperclip.paste())
+    
     def test_credential_exists(self):
 
         """
