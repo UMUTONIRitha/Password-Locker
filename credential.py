@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.6
+import pyperclip
 class Credential:
     """
     class that generates accountName,username and password of credentials 
@@ -52,4 +54,12 @@ class Credential:
                 return True
 
         return False
+
+    @classmethod
+    def display_credential(cls):
+        """
+        display credential method to display list of credential
+        """
+        return cls.credential_list
+
 
