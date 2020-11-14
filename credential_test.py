@@ -37,12 +37,23 @@ class TestCredential(unittest.TestCase):
 
     def test_save_multiple_credential(self):
         """
-        to save multiple credential 
+        To test if you can save multiple credential 
         """
         self.new_credential.save_credential()
         test_credential = Credential("gmail","marie","marie123")
         test_credential.save_credential()
         self.assertEqual(len(Credential.credential_list),2)
+
+    def test_delete_credential(self):
+        """
+        To test if you can delete credential on the list
+        """
+        self.new_credential.save_credential()
+        test_credential = Credential("gmail","marie","marie123") 
+        test_credential.save_credential()
+
+        self.new_credential.delete_credential()
+        self.assertEqual(len(Credential.credential_list),1)
 
 if __name__ == '__main__':
     unittest.main()
