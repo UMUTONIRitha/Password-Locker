@@ -79,3 +79,19 @@ def exist_credentials(username):
     Function that checks if a credential exists from the credential list and return true or false.
     """
     return Credential.credential_exist(username)
+
+def copy_passwords(username):
+    """
+    function that copy password
+    """
+    return Credential.copy_password(username)
+
+def password_locker():
+    print("Welcome to Password Locker\n ")
+    user_name = input()
+
+    print(f"Hello, {user_name} what wouldyou like to do?")
+    print("\n")
+
+if __name__ == '__main__':
+    password_locker()
