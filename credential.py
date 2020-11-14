@@ -7,6 +7,18 @@ class Credential:
     """
     credential_list = [] 
 
+    @classmethod
+    def verify_user(cls,username,password):
+        """
+        method to verify whether the user is on the list of the user
+        """
+        current_user = ""
+        for user in User.user_list:
+            if(user.username == username and user.password == password):
+                current_user == user.username
+        return current_user
+
+
     def __init__(self,accountName,username,password):
 
         """
