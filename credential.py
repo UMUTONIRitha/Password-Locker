@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.6
 import pyperclip
+
 class Credential:
     """
     class that generates accountName,username and password of credentials 
@@ -42,8 +43,8 @@ class Credential:
 
     @classmethod
     def copy_password(cls,username):
-        found_credential = Credential.find_by_username(usrname)
-        pyperclip.copy(found_credential.password)
+        credential_found = Credential.find_by_username(username)
+        pyperclip.copy(credential_found.password)
 
     @classmethod 
     def credential_exist(cls,username):
