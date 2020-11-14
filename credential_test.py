@@ -56,6 +56,9 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(len(Credential.credential_list),1)
 
     def test_find_credential_by_username(self):
+        """
+        test to check if we can find a credential by username and display information
+        """
         
 
         self.new_credential.save_credential()
