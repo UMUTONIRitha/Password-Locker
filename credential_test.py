@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.6
+import pyperclip
 import unittest
 from credential import Credential
 
@@ -70,7 +72,7 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(found_credential.accountName,test_credential.accountName)
 
     def test_credential_exists(self):
-        
+
         """
         test to check if we can return a Boolean  if we cannot find the contact
         """
@@ -81,6 +83,12 @@ class TestCredential(unittest.TestCase):
 
         credential_exists = Credential.credential_exist("marie")
         self.assertTrue(credential_exists)
+
+    def test_display_credential(self):
+        """
+        methods that test the display all credntial saved by user
+        """
+        self.assertEqual(Credential.display_credential(),Credential.credential_list)
 
 
 if __name__ == '__main__':
