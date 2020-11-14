@@ -5,20 +5,20 @@ import random
 import string
 import sys
 
-def create_user(username,password):
+def create_users(username,password):
     """
     function to create a new user
     """
     new_user = User (username,password)
     return new_user
 
-def save_user(user):
+def save_users(user):
     """
     Function to save user
     """
     user.save_user()
 
-def display_user(user):
+def display_users(user):
     """
     Function to display saved user
     """
@@ -31,11 +31,11 @@ def login_user(username,password):
     check_user = Credential.verify_user(username,password)
     return check_user
 
-def delete_user(user):
+def delete_users(user):
     """
     Function to delete a user
     """
-    user.delete_contact()
+    user.delete_user()
 
 def create_credential(accountName,username,password):
     """
@@ -44,27 +44,38 @@ def create_credential(accountName,username,password):
     new_credential = Credential (accountName,username,password)
     return new_credential
 
-def save_credential(credential):
+def save_credentials(credential):
     """
     Function to save credential
     """
     credential.save_credential()
 
-def display_credential(credential):
+def passwords_generate(size = 8, characters=string.ascii_letters + string.digits + string.punctuation):
+    """
+    Generate random password of string letters,digits and ponctuation
+    """
+    return''.join(random.choice(characters)for i in range(size))
+
+def display_credentials(credential):
     """
     Function to display saved credential
     """
-    credential.display_credential()
+    return Credential.display_credential()
 
-def delete_credential(credential):
+def delete_credentials(credential):
     """
     Function to delete a credential
     """
     credential.delete_credential()
 
-def find_credential(username):
+def find_credentials(username):
     """
     function that finds in username and returns a credential that matches that username
     """
     return Credential.find_by_username(username)
 
+def exist_credentials(username):
+    """
+    Function that checks if a credential exists from the credential list and return true or false.
+    """
+    return Credential.credential_exist(username)
