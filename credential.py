@@ -38,3 +38,18 @@ class Credential:
             if name.username == username:
                 return name
 
+    @classmethod 
+    def credential_exist(cls,username):
+        """
+        Method that checks if a credential exists from the credential list.
+        """
+
+
+        for name in cls.credential_list:
+
+            if name.username == username:
+
+                return True
+
+        return False
+
