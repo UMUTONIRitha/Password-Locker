@@ -4,3 +4,30 @@ from credential import Credential
 import random
 import string
 import sys
+
+def create_user(username,password):
+    """
+    function to create a new user
+    """
+    new_user = User (username,password)
+    return new_user
+
+def save_user(user):
+    """
+    Function to save user
+    """
+    user.save_user()
+
+def display_user(user):
+    """
+    Function to display saved user
+    """
+    user.display_user()
+
+
+
+def delete_user(user):
+    """
+    Function to delete a user
+    """
+    user.delete_contact()
