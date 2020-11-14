@@ -1,7 +1,6 @@
 #!/usr/bin/env python3.6
 import pyperclip
-import random
-import string
+
 from user import User
 
 
