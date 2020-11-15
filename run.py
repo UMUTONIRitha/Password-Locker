@@ -184,9 +184,9 @@ def password_locker():
                 print('/n')       
         elif short_code == "gp":
             password = passwords_generate()
-            print(f" password {password} has been generated successful.\n")
+            print(f" password {password} has been generated.\n")
         elif short_code == "ex":
-            print("Thanks for using Password-Locks, see you next time!")
+            print("Thanks for using Password-Locker")
             break
         else:
             print("please enter valid input!")
