@@ -13,7 +13,7 @@
 * Open Terminal
 * Google Chrome
 * internet
-* [git clone] (https://github.com/UMUTONIRitha/Password-Locker.git)
+* [git clone](https://github.com/UMUTONIRitha/Password-Locker.git)
 
 ## Application Used
 
@@ -29,12 +29,12 @@
 
 * Enter a user name
 * choose the short codes:
-* * cc: Create Credential
-* * dc: Display Credential
-* * fc: Find Credential
-* * gp:Generate Password
-* * dc:delete Credential
-* * ex:Exit application
+  * cc: Create Credential
+  * dc: Display Credential
+  * fc: Find Credential
+  * gp:Generate Password
+  * dc:delete Credential
+  * ex:Exit application
 
 ## How Password-Locker Project look
 
