@@ -57,6 +57,13 @@ class TestCredential(unittest.TestCase):
         self.new_credential.delete_credential()
         self.assertEqual(len(Credential.credential_list),1)
 
+    def test_password_generate(self):
+        """
+        Test case to check a user if he\she be capable to geberate password
+        """
+        password_generate = self.new_credential.password_generate()
+        self.assertEqual(len(password_generate),8)
+
     def test_find_credential_by_username(self):
         """
         test to check if we can find a credential by username and display information
@@ -93,11 +100,11 @@ class TestCredential(unittest.TestCase):
         credential_exists = Credential.credential_exist("marie")
         self.assertTrue(credential_exists)
 
-    def test_display_credential(self):
+    def test_display_credentials(self):
         """
         methods that test the display all credntial saved by user
         """
-        self.assertEqual(Credential.display_credential(),Credential.credential_list)
+        self.assertEqual(Credential.display_credentials(),Credential.credential_list)
 
 
 if __name__ == '__main__':
