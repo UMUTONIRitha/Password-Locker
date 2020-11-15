@@ -1,6 +1,7 @@
 #!/usr/bin/env python3.6
 import pyperclip
-
+import random
+import string
 from user import User
 
 
@@ -8,7 +9,17 @@ class Credential:
     """
     class that generates accountName,username and password of credentials 
     """
+
+    
     credential_list = [] 
+    def __init__(self,accountName,username,password):
+
+        """
+        use __init__ method and define properties 
+        """
+        self.accountName = accountName
+        self.username = username
+        self.password = password
 
     @classmethod
     def verify_user(cls,username,password):
@@ -22,14 +33,7 @@ class Credential:
         return current_user
 
 
-    def __init__(self,accountName,username,password):
-
-        """
-        use __init__ method and define properties 
-        """
-        self.accountName = accountName
-        self.username = username
-        self.password = password
+    
 
     def save_credential(self):
 
@@ -44,6 +48,17 @@ class Credential:
         """
       
         Credential.credential_list.remove(self)
+
+    @classmethod
+    def password_generate(cls):
+        
+        """
+        Generate random password of string letters,digits and ponctuation
+        """
+        size = 8
+        characters=string.ascii_letters + string.digits + string.punctuation
+        pass_word = ''.join(random.choice(characters)for i in range(size))
+        return pass_word
 
     @classmethod
     def find_by_username(cls,username):
@@ -77,7 +92,7 @@ class Credential:
         return False
 
     @classmethod
-    def display_credential(cls):
+    def display_credentials(cls):
         """
         display credential method to display list of credential
         """
